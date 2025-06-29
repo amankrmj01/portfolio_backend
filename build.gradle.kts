@@ -32,3 +32,11 @@ dependencies {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+sourceSets {
+    main {
+        java {
+            exclude("repository/**")
+        }
+    }
+}

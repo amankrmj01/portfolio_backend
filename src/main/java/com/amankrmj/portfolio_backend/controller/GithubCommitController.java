@@ -9,7 +9,10 @@ import com.amankrmj.portfolio_backend.services.GithubCommitService;
 import com.amankrmj.portfolio_backend.services.PhoneValidator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
@@ -31,10 +34,10 @@ public class GithubCommitController {
     }
 
 
-    @PutMapping("/file")
-    public ResponseEntity<String> createOrUpdateFile(@RequestParam String path, @RequestBody GithubCommitModel commit) {
-        return githubCommitService.createOrUpdateFile(path, commit);
-    }
+//    @PutMapping("/file")
+//    public ResponseEntity<String> createOrUpdateFile(@RequestParam String path, @RequestBody GithubCommitModel commit) {
+//        return githubCommitService.createOrUpdateFile(path, commit);
+//    }
 
     @PostMapping("/contact")
     public ResponseEntity<String> commitContactForm(@RequestBody ContactModel contactForm) {

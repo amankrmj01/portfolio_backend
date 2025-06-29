@@ -8,16 +8,37 @@ public class ContactModel implements Serializable {
     private String phoneNumber;
     private String email;
     private String message;
+    private String date;
+    private String time;
+
 
     public ContactModel() {
     }
 
-    public ContactModel(String name, String countryCode, String phoneNumber, String email, String message) {
+    public ContactModel(String name, String countryCode, String phoneNumber, String email, String message, String date, String time) {
         this.name = name;
         this.countryCode = countryCode;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.message = message;
+        this.date = date;
+        this.time = time;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getName() {
