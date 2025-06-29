@@ -1,14 +1,23 @@
 package com.amankrmj.portfolio_backend.model.contact.details;
 
+import jakarta.validation.constraints.NotBlank;
+
 import java.io.Serializable;
 
 public class ContactModel implements Serializable {
+    @NotBlank
     private String name;
+    @NotBlank
     private String countryCode;
+    @NotBlank
     private String phoneNumber;
+    @NotBlank
     private String email;
+    @NotBlank
     private String message;
+    @NotBlank
     private String date;
+    @NotBlank
     private String time;
 
 
